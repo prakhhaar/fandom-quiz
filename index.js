@@ -21,7 +21,7 @@ function checkAnswers(questions) {
 
 // Objects of questions
 var q1 = {
-  question: "How many pennalties are usually taken in a penalty shoot-out? ",
+  question: "How many penalties are usually taken in a penalty shoot-out? ",
   answer: 5
 };
 
