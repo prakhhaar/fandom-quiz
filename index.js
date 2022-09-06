@@ -3,7 +3,12 @@ var readlineSync = require("readline-sync");
 
 var score = 0;
 
-console.log("Welcome to football quiz");
+function welcome() {
+ var userName = readlineSync.question("What's your name? ");
+console.log("Welcome "+ userName + " to Football quiz");
+}
+
+welcome();
 console.log("--------------------")
 
 // Function to check answers and update score
@@ -45,34 +50,8 @@ var q5 = {
   answer: 90
 };
 
-var q6 = {
-  question: "Where were the 2002 World Cup Finals held? ",
-  answer: "Japan and Korea"
-};
-
-var q7 = {
-  question: "Celtic and Rangers plays their football in which Scottish city? ",
-  answer: "Glasgow"
-};
-
-var q8 = {
-  question: "What color cards does refrees carry in a football match? ",
-  answer: "Red and Yellow"
-}
-
-var q9 = {
-  question: "Real Madrid plays football in which league? ",
-  answer: "LaLiga"
-};
-
-var q10 = {
-  question: "Which English football club has the nickname 'The Gunners'? ",
-  answer: "Arsenal"
-}
-
 // Array of questions
 var questionsList = [q1, q2, q3, q4, q5];
-var questionsListTwo = [q6, q7, q8, q9, q10];
 checkAnswers(questionsList);
 
 if (score == questionsList.length) {
